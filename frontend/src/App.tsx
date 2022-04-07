@@ -1,8 +1,13 @@
 import React from "react";
+import SlideBar from "./components/SlideBar";
 import "./App.css";
 
 function App() {
-  return <div className="App">{/* write your component here */}</div>;
+  const onCardChange = function (index: number) {
+    console.log(index)
+  }
+  return <div className="App"><SlideBar number={3} intervalTime={3000} onChange={onCardChange}>
+  </SlideBar></div>;
 }
 
 export default App;
